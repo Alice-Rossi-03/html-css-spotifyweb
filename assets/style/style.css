@@ -1,0 +1,56 @@
+/************* 
+- reset css -
+*************/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px dashed black;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+/************* 
+- import font -
+*************/
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=PT+Sans&display=swap');
+
+html{
+    font-family: 'Manrope', sans-serif;
+}
+
+/************* 
+- properties - 
+*************/
+
+#big-flex-container{
+    width: 100%;
+    display: flex;
+}
+
+#big-flex-container #aside-section{
+    min-width: 10em;
+    height: 100%;
+}
+
+#big-flex-container #major-section{
+    width: calc(100% - 10em);
+    height: 100%; 
+}
+
+
+#bottom-section{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 999;
+    height: 100px;
+}
