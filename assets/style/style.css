@@ -57,48 +57,48 @@ html {
     position: fixed;
     left: 0;
     top: 0;
+    color: white;
+    background-color: #000000;
 }
 
 #big-flex-container #aside-section #top-aside {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1.5em;
 }
 
 #big-flex-container #aside-section #top-aside #logo {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 #big-flex-container #aside-section #top-aside #logo div:first-child {
-    width: 35%;
+    width: 100%;
     height: 3em;
-}
-
-#big-flex-container #aside-section #top-aside #logo div:last-child {
-    height: 3em;
-    width: calc(65% - 5px);
 }
 
 #big-flex-container #aside-section #top-aside #functions {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
 }
 
-#big-flex-container #aside-section #top-aside #functions #function {
+#big-flex-container #aside-section #top-aside #functions .function {
     width: 100%;
     height: 1em;
     display: flex;
     gap: 5px;
+    align-items: center;
 }
 
-#big-flex-container #aside-section #top-aside #functions #function div:first-child {
-    width: 35%;
+#big-flex-container #aside-section #top-aside #functions .function div:first-child {
+    width: 25%;
 }
 
-#big-flex-container #aside-section #top-aside #functions #function div:last-child {
-    width: calc(65% - 5px);
+#big-flex-container #aside-section #top-aside #functions .function div:last-child {
+    width: calc(75% - 5px);
+    font-size: 0.6em;
 }
 
 #big-flex-container #aside-section #top-aside #playlist {
@@ -107,24 +107,28 @@ html {
     gap: 5px;
 }
 
-
 #big-flex-container #aside-section #top-aside #playlist h4 {
     height: 20px;
+    text-transform: uppercase;
+    color: white;
 }
 
 #big-flex-container #aside-section #top-aside #playlist #new-playlist {
     display: flex;
     height: 30px;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 5px;
+    align-items: center;
 }
 
 #big-flex-container #aside-section #top-aside #playlist #new-playlist div:first-child {
-    width: 35%;
+    width: 20%;
 }
 
 #big-flex-container #aside-section #top-aside #playlist #new-playlist div:last-child {
-    width: calc(65% - 5px);
+    width: calc(80% - 5px);
+    font-size: 0.7em;
 }
 
 #big-flex-container #aside-section #top-aside #playlist #playlists {
@@ -135,36 +139,36 @@ html {
 
 #big-flex-container #aside-section #top-aside #playlist #playlists div {
     height: 10px;
+    font-size: 0.5em;
 }
 
 #big-flex-container #aside-section #bottom-aside {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 0.5em;    
 }
 
 #big-flex-container #aside-section #bottom-aside #download-app,
 #big-flex-container #aside-section #bottom-aside #my-account {
     display: flex;
-    justify-content: space-between;
-}
-
-#big-flex-container #aside-section #bottom-aside #download-app div:first-child,
-#big-flex-container #aside-section #bottom-aside #my-account div:first-child {
-    width: 35%;
-}
-
-#big-flex-container #aside-section #bottom-aside #download-app div:last-child,
-#big-flex-container #aside-section #bottom-aside #my-account div:last-child {
-    width: calc(65% - 5px);
+    gap: 0.5em;
+    align-items: center;
 }
 
 #big-flex-container #aside-section #bottom-aside #download-app div:first-child {
-    width: 20%;
+    align-self: center;
+    width: 1.5em;
 }
 
 #big-flex-container #aside-section #bottom-aside #download-app div:last-child {
     width: calc(80% - 5px);
+    font-size: 0.6em;
+    align-self: center;
+}
+
+#big-flex-container #aside-section #bottom-aside hr{
+    border: 0.5px solid white;
+    opacity: 0.5;
 }
 
 #big-flex-container #aside-section #bottom-aside #my-account div:first-child {
@@ -181,17 +185,34 @@ html {
     height: 1em;
 }
 
-#big-flex-container #aside-section #bottom-aside #my-account div:first-child,
-#big-flex-container #aside-section #bottom-aside #my-account div:last-child {
+#big-flex-container #aside-section #bottom-aside #my-account div:first-child {
     height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: 1;
+    background-color: gray;
+}
+
+#big-flex-container #aside-section #bottom-aside #my-account div:last-child {
+    font-size: 0.8em;
+    font-weight: bold;
 }
 
 
+/* utility */
 
+.less-opacity{
+    opacity: 0.5;
+}
 
+.less-opacity:hover{
+    opacity: 1;
+}
 
-
-
+#hide-show{
+    display: none;
+}
 
 
 
@@ -250,6 +271,7 @@ html {
     justify-content: center;
     list-style: none;
     display: flex; 
+    flex-wrap: wrap;
     gap: 1em;
 }
 
@@ -324,6 +346,7 @@ html {
     display: flex;
     justify-content: space-between;
     gap: 50px;
+    background-color: #282828;
 }
 
 #bottom-section .bottom-aside {
@@ -404,14 +427,18 @@ html {
 /* ----- ipad ----- */
 
 @media screen and (max-width: 878px){
-    
+    #major-section #main-section #spotify-tracks .tracks-container .tracks .track{
+        width: calc(100% / 3 - 1em);
+    }
 }
 
 
 /* ----- iphone ----- */
 
 @media screen and (max-width: 639px){
-    
+    #major-section #main-section #spotify-tracks .tracks-container .tracks .track{
+        width: calc(100% / 2 - 1em);
+    }
 }
 
 
@@ -419,5 +446,60 @@ html {
 
 
 @media screen and (max-width: 552px){
+    #big-flex-container #aside-section{
+        min-width: 5em;
+    }
+
+    #big-flex-container #aside-section #top-aside #logo div:first-child,
+    #big-flex-container #aside-section #top-aside #functions .function div:first-child{
+        width: 100%;
+    }
+
+    /* #big-flex-container #aside-section #top-aside #logo div:last-child, */
+    #big-flex-container #aside-section #top-aside #functions .function div:last-child,
+    #big-flex-container #aside-section #top-aside #playlist{
+        display: none;
+    }
+
+    #big-flex-container #aside-section #bottom-aside #download-app div:first-child,
+    #big-flex-container #aside-section #bottom-aside #my-account div:first-child{
+        width: 100%;
+    }
+
+    #big-flex-container #aside-section #bottom-aside #download-app div:last-child,
+    #big-flex-container #aside-section #bottom-aside #my-account div:last-child,
+    #big-flex-container #aside-section #bottom-aside hr{
+        display: none;
+    }
+
+    #big-flex-container #major-section {
+        margin-left: 5em;
+    }
+
+    #big-flex-container #major-section {
+        width: calc(100% - 5em);
+    }
+
+    #major-section #upgrade{
+        left: 5em;
+    }
+
+    #hide{
+        display: none;
+    }
+
+    #hide-show{
+        display: block;
+        height: 3em;
+    }
+
+    #big-flex-container #aside-section #bottom-aside {
+        gap: 1em; 
+        align-items: center;   
+    }
+    #big-flex-container #aside-section #bottom-aside #download-app div:first-child {
+        width: 1.5em;
+    }
+    
     
 }
