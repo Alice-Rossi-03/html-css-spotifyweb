@@ -211,7 +211,8 @@ html {
 #big-flex-container #major-section {
     width: calc(100% - 10em);
     justify-self: flex-end;
-    height: calc(100vh - 5em); 
+    height: 100%; 
+    background-color: #141922;
     margin-left: 10em;
 }
 
@@ -290,8 +291,23 @@ html {
 }
 #major-section #main-section #spotify-tracks .tracks-container .tracks .track span{
     opacity: 0.5;
+    text-transform: capitalize;
     font-size: 0.8rem;
 }
+#major-section #main-section #spotify-tracks .tracks-container .tracks .track h4{
+    text-transform: capitalize;
+}
+
+#major-section #main-section #spotify-tracks .tracks-container p{
+    opacity: 0.5;
+    font-size: 0.8rem;
+}
+
+#major-section #main-section #spotify-tracks .tracks-container .tracks .track .circle-box img{
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
 
 
 /********** - bottom_section - ************/
@@ -375,4 +391,33 @@ html {
     height: 5px;
     width: 9em;
     align-self: center;
+}
+
+
+
+
+/*********************************
+--------- responsive_area ------------ 
+**********************************/
+
+
+/* ----- ipad ----- */
+
+@media screen and (max-width: 878px){
+    
+}
+
+
+/* ----- iphone ----- */
+
+@media screen and (max-width: 639px){
+    
+}
+
+
+/* ----- mini_phone ----- */
+
+
+@media screen and (max-width: 552px){
+    
 }
