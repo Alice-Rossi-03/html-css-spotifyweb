@@ -15,6 +15,8 @@ a {
 
 img {
     max-width: 100%;
+    display: block;
+    object-fit: cover; 
 }
 
 /************* 
@@ -31,8 +33,13 @@ html {
 - properties - 
 *************/
 
+#Web-App{
+    height: 100vh;
+}
+
 #big-flex-container {
     width: 100%;
+    background-color: #141922;
     /* display: flex; */
     /* justify-content: space-between; */
 }
@@ -202,11 +209,88 @@ html {
 /********** - major_section - ************/
 
 #big-flex-container #major-section {
-    /* width: calc(100%); */
+    width: calc(100% - 10em);
     justify-self: flex-end;
-    /* height: 100%;  */
-    overflow: auto;
+    height: calc(100vh - 5em); 
     margin-left: 10em;
+}
+
+#major-section #upgrade{
+    height: 5em;
+    position: fixed;
+    left: 10em;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+#major-section #upgrade a{
+    font-size: 13px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding-block: 1em ;
+    padding-inline: 4em;
+}
+
+#major-section #main-section{
+    padding-block: 6em;
+    padding-inline: 1em;
+    overflow: auto;
+}
+
+#major-section #main-section ul{
+    font-size: 12px;
+    justify-content: center;
+    list-style: none;
+    display: flex; 
+    gap: 1em;
+}
+
+#major-section #main-section ul a{
+    color: white;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+#major-section #main-section ul a:hover{
+    opacity: 1;
+}
+
+#major-section #main-section #spotify-tracks {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+    padding-block: 3em;
+    color: white;
+}
+
+#major-section #main-section #spotify-tracks .tracks-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+#major-section #main-section #spotify-tracks .tracks-container .tracks{
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+#major-section #main-section #spotify-tracks .tracks-container .tracks .track{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: center;
+    width: calc(100% / 6 - 1em);
+}
+#major-section #main-section #spotify-tracks .tracks-container .tracks .track span{
+    opacity: 0.5;
+    font-size: 0.8rem;
 }
 
 
