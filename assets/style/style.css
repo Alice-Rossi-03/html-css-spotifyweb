@@ -417,9 +417,7 @@ html {
     color: white;
 }
 
-#bottom-section .bottom-aside > div{
-    /* flex-basis: 20%; */
-}
+
 
 #bottom-section .bottom-aside #image {
     /* width: 60%; */
@@ -445,6 +443,7 @@ html {
     font-size: 0.6em;
     opacity: 0.5;
 }
+
 #bottom-section .bottom-aside #image div:last-child div:hover{
     text-decoration: underline;
     opacity: 1;
@@ -479,14 +478,42 @@ html {
 }
 
 #bottom-section #bottom-center #music-track div:nth-of-type(odd){ 
-    height: 1em;
-    width: 1em;
+    font-size: 0.5em;
+    color: #fff;
 }
 
 #bottom-section #bottom-center #music-track div:nth-of-type(even){ 
     height: 5px;
     width: 20em;
+    border-radius: 2px;
+    background-color: gray;
+    display: flex;
+    justify-content: flex-start;
+    border: 0;
 }
+
+#bottom-section #bottom-center #music-track div:nth-of-type(even) span:first-child{ 
+    width: 5em;
+    background-color: lightgrey;
+    /* border-radius: 2px; */
+}
+
+#bottom-section #bottom-center #music-track div:nth-of-type(even):hover span:first-child{ 
+    background-color: greenyellow;
+}
+
+#bottom-section #bottom-center #music-track div:nth-of-type(even) span:last-child{ 
+    margin-top: -9px;
+    margin-left: -10px;
+    fill: greenyellow;
+    opacity: 0;
+}
+
+#bottom-section #bottom-center #music-track div:nth-of-type(even):hover span:last-child{ 
+    opacity: 1;
+}
+
+
 
 #bottom-section #bottom-right div:last-child{
     height: 5px;
@@ -516,10 +543,6 @@ html {
     padding: 5px;
     align-items: center;
     color: white;
-}
-
-#bottom-section .bottom-aside > div{
-    /* flex-basis: 20%; */
 }
 
 #bottom-section .bottom-aside #image {
