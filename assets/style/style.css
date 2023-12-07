@@ -153,7 +153,7 @@ html {
     flex-direction: column;
     gap: 0.5em;
     height: 4em;  
-    overflow: hidden;  
+    margin-bottom: 0.5em;
 }
 
 #big-flex-container #aside-section #bottom-aside #download-app,
@@ -222,9 +222,17 @@ html {
     display: none;
 }
 
+.transition{
+    transition: 0.5s; 
+}
 
+.transition:hover{
+    transform: scale(150%); 
+}
 
-
+#transition-02:hover{
+    transform: scale(120%);
+}
 
 
 
@@ -255,10 +263,12 @@ html {
     justify-content: flex-end;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.75);
+    z-index: 30;
 }
 
 #major-section #upgrade a{
     font-size: 13px;
+    margin-right: 2em;
     text-decoration: none;
     color: white;
     text-transform: uppercase;
@@ -338,6 +348,47 @@ html {
     border-radius: 50%;
 }
 
+#major-section #main-section #spotify-tracks .tracks-container .tracks .track figure{
+    position: relative;
+    transition: 0.2s;
+}
+
+#major-section #main-section #spotify-tracks .tracks-container .tracks .track figure span{
+    opacity: 0;
+    transition: 0.2s;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#major-section #main-section #spotify-tracks .tracks-container .tracks .track figure span svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    fill: white;
+    transform: translate(-50%,-50%);
+}
+
+
+
+
+#major-section #main-section #spotify-tracks .tracks-container .tracks .track figure span:hover{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /********** - bottom_section - ************/
@@ -359,35 +410,54 @@ html {
 
 #bottom-section .bottom-aside {
     display: flex;
-    gap: 10px;
-    width: 10em;
+    gap: 5px;
+    width: 30%;
     padding: 5px;
+    align-items: center;
+    color: white;
 }
 
 #bottom-section .bottom-aside > div{
-    width: 20%;
+    /* flex-basis: 20%; */
 }
 
 #bottom-section .bottom-aside #image {
-    width: 60%;
+    /* width: 60%; */
     display: flex;
     gap: 5px;
+    align-items: center;
 }
 
 #bottom-section .bottom-aside #image div:first-child{
-    width: 70%;
+    width: 30%;
+    aspect-ratio: 1;
 }
 
-#bottom-section .bottom-aside #image div:last-child{
-    width: calc(30% - 5px);
+#bottom-section .bottom-aside #image div:first-child img{
+    height: 100%;
 }
+
+#bottom-section .bottom-aside #image div:last-child h6{
+    font-size: 0.8em;
+}
+
+#bottom-section .bottom-aside #image div:last-child div{
+    font-size: 0.6em;
+    opacity: 0.5;
+}
+#bottom-section .bottom-aside #image div:last-child div:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+
+
 
 
 #bottom-section #bottom-center {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 50%;
+    width: 60%;
 }
 
 #bottom-section #bottom-center #music-options{
@@ -438,6 +508,48 @@ html {
     #major-section #main-section #spotify-tracks .tracks-container .tracks .track{
         width: calc(100% / 3 - 1em);
     }
+
+    #bottom-section .bottom-aside {
+    display: flex;
+    gap: 5px;
+    width: 30%;
+    padding: 5px;
+    align-items: center;
+    color: white;
+}
+
+#bottom-section .bottom-aside > div{
+    /* flex-basis: 20%; */
+}
+
+#bottom-section .bottom-aside #image {
+    /* width: 60%; */
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+#bottom-section .bottom-aside #image div:first-child{
+    width: 30%;
+    aspect-ratio: 1;
+}
+
+#bottom-section .bottom-aside #image div:first-child img{
+    height: 100%;
+}
+
+#bottom-section .bottom-aside #image div:last-child h6{
+    font-size: 0.8em;
+}
+
+#bottom-section .bottom-aside #image div:last-child div{
+    font-size: 0.6em;
+    opacity: 0.5;
+}
+#bottom-section .bottom-aside #image div:last-child div:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
 }
 
 
