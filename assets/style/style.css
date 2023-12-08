@@ -127,7 +127,7 @@ html {
 
 #big-flex-container #aside-section #top-aside #playlist #new-playlist {
     display: flex;
-    height: 30px;
+    height: 2.5em;
     flex-direction: row;
     justify-content: flex-start;
     gap: 5px;
@@ -147,11 +147,12 @@ html {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    height: 400px;
     overflow: auto;
 }
 
 #big-flex-container #aside-section #top-aside #playlist #playlists div {
-    height: 10px;
+    /* height: 10px; */
     font-size: 0.5em;
 }
 
@@ -161,6 +162,7 @@ html {
     gap: 0.5em;
     height: 4em;  
     margin-bottom: 0.5em;
+    padding-block: 5px;
 }
 
 #big-flex-container #aside-section #bottom-aside #download-app,
@@ -518,6 +520,7 @@ html {
 
 #bottom-section #bottom-center #music-track div:nth-of-type(even) span:first-child{ 
     width: 25%;
+    border-radius: 2px;
     background-color: lightgrey;
     /* border-radius: 2px; */
 }
@@ -556,6 +559,7 @@ html {
 }
 
 #bottom-section #bottom-right div:last-child span:first-child{ 
+    border-radius: 2px;
     width: 25%;
     background-color: lightgrey;
     /* border-radius: 2px; */
